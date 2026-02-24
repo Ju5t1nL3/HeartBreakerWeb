@@ -1,16 +1,22 @@
-<div class="iframe-container">
-    <iframe src="wwwhataburger.html" width="1280" height="720"></iframe>
+<div class="padding-container">
+    <div class="iframe-container">
+        <iframe src="wwwhataburger.html" width="1280" height="720"></iframe>
+    </div>
 </div>
 <style>
     body {
         margin: 0;
         height: 100vh;
-        background: #000000;
+        background: #a2aeda;
         display: flex;
         justify-content: center;
     }
 
     .iframe-container {
+        overflow: hidden;
+    }
+
+    .padding-container {
         width: 100%;
         padding: 1.5rem;
         box-sizing: border-box;
@@ -18,7 +24,12 @@
 
     .iframe-container iframe {
         aspect-ratio: 1280 / 720;
-        width: 100%;
+        display: block;
         border: none;
+        height: fit-content;
+        width: calc(100% + 2px);
+        height: fit-content;
+
+        margin: -1px
     }
 </style>
